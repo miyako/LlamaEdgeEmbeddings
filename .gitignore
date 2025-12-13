@@ -1,0 +1,6 @@
+LlamaEdge/Project/DerivedData/*
+LlamaEdge/userPreferences.*
+LlamaEdge/Settings/buildApp.4DSettings
+LlamaEdge/Resources/en.lproj/syntaxEN.json
+LlamaEdge/Data/*
+LlamaEdge/Libraries/lib4d-arm64.dylib
