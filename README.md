@@ -7,5 +7,5 @@ Local inference engine
 
 ## Dependencies
 
-* [miyako/tcp](https://github.com/miyako/tcp)
-* [miyako/workers](https://github.com/miyako/workers)
+* [miyako/tcp](https://github.com/miyako/tcp) - to test if port is taken
+* [miyako/workers](https://github.com/miyako/workers) - to manage `4D.SysytemWorker` instances
