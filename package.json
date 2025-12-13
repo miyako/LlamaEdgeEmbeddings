@@ -1,11 +1,11 @@
 {
-  "name": "package.json",
+  "name": "LlamaEdgeEmbeddings",
   "description": "Local inference engine",
   "author": [
     "Keisuke Miyako <keisuke.miyako@4D.com>"
   ],
   "license": "MIT",
-  "repository": "https://github.com/miyako/package.json",
+  "repository": "https://github.com/miyako/LlamaEdgeEmbeddings",
   "version": "20.0.0",
   "tool": {
     "platform": "macos",
