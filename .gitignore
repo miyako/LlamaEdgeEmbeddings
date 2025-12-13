@@ -4,3 +4,6 @@ LlamaEdge/Settings/buildApp.4DSettings
 LlamaEdge/Resources/en.lproj/syntaxEN.json
 LlamaEdge/Data/*
 LlamaEdge/Libraries/lib4d-arm64.dylib
+LlamaEdge/Components/*
+LlamaEdge/Resources/bin/macOS/lib/libwasmedge.0.dylib
+LlamaEdge/Resources/bin/macOS/plugin/libLLVM.dylib
