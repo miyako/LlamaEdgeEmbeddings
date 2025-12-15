@@ -103,7 +103,7 @@ Function start()
 Function terminate()
 	
 	var $LlamaEdge : cs:C1710.workers.worker
-	$LlamaEdge:=cs:C1710.workers.worker.new()
+	$LlamaEdge:=cs:C1710.workers.worker.new(cs:C1710._server)
 	$LlamaEdge.terminate()
 	
 Function onData($request : 4D:C1709.HTTPRequest; $event : Object)
