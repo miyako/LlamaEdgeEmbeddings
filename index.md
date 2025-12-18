@@ -27,7 +27,7 @@ If (False)
 Else 
     var $homeFolder : 4D.Folder
     $homeFolder:=Folder(fk home folder).folder(".LlamaEdge")
-    var $model : cs.LlamaEdgeModel
+    var $model : cs.cs.LlamaEdge.LlamaEdgeModel
     var $file : 4D.File
     var $URL : Text
     var $prompt_template : Text
@@ -68,20 +68,31 @@ Else
     $models.push($model)
     
     var $port : Integer
-    $port:=8080
+    $port:=8081
     
-    var $event : cs.LlamaEdge.LlamaEdgeEvent
-    $event:=cs.LlamaEdge.LlamaEdgeEvent.new()
+    var $event : cs.event.event
+    $event:=cs.event.event.new()
     /*
-        Function onError($params : Object; $error : cs._error)
-        Function onSuccess($params : Object)
+        Function onError($params : Object; $error : cs.event.error)
+        Function onSuccess($params : Object; $models : cs.event.models)
+        Function onData($request : 4D.HTTPRequest; $event : Object)
+        Function onResponse($request : 4D.HTTPRequest; $event : Object)
+        Function onTerminate($worker : 4D.SystemWorker; $params : Object)
+        Function onStdOut($worker : 4D.SystemWorker; $params : Object)
+        Function onStdErr($worker : 4D.SystemWorker; $params : Object)
     */
+    
     $event.onError:=Formula(ALERT($2.message))
-    $event.onSuccess:=Formula(ALERT($1.models.extract("file.name").join(",")+" loaded!"))
+    $event.onSuccess:=Formula(ALERT($2.models.extract("name").join(",")+" loaded!"))
+    $event.onData:=Formula(LOG EVENT(Into 4D debug message; "download:"+String((This.range.end/This.range.length)*100; "###.00%")))
+    $event.onResponse:=Formula(LOG EVENT(Into 4D debug message; "download complete"))
+    $event.onStdOut:=Formula(LOG EVENT(Into 4D debug message; "out:"+$2.data))
+    $event.onStdErr:=Formula(LOG EVENT(Into 4D debug message; "err:"+$2.data))
+    $event.onTerminate:=Formula(LOG EVENT(Into 4D debug message; (["process"; $1.pid; "terminated!"].join(" "))))
     
     $LlamaEdge:=cs.LlamaEdge.LlamaEdge.new($port; $models; {home: $homeFolder}; $event)
     
-End if   
+End if 
 ```
 
 Unless the server is already running (in which case the costructor does nothing), the following procedure runs in the background:
