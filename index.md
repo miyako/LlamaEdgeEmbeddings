@@ -4,8 +4,8 @@ layout: default
 
 ![version](https://img.shields.io/badge/version-20%2B-E23089)
 ![platform](https://img.shields.io/static/v1?label=platform&message=mac-arm&color=blue)
-[![license](https://img.shields.io/github/license/miyako/LlamaEdgeEmbeddings)](LICENSE)
-![downloads](https://img.shields.io/github/downloads/miyako/LlamaEdgeEmbeddings/total)
+[![license](https://img.shields.io/github/license/miyako/LlamaEdge)](LICENSE)
+![downloads](https://img.shields.io/github/downloads/miyako/LlamaEdge/total)
 
 # Use LlamaEdge from 4D
 

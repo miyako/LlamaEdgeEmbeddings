@@ -1,4 +1,4 @@
-# LlamaEdgeEmbeddings
+# LlamaEdge
 Local inference engine
 
 [LlamgeEdge](https://llamaedge.com)+[llama-api-server](https://github.com/LlamaEdge/LlamaEdge/tree/main/llama-api-server).

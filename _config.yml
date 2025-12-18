@@ -5,16 +5,16 @@ kramdown:
   syntax_highlighter: rouge
 highlighter: rouge
 plugins_dir: _plugins
-baseurl: /LlamaEdgeEmbeddings
+baseurl: /LlamaEdge
 
-title: "LlamaEdgeEmbeddings"
+title: "LlamaEdge"
 description: "Use LlamaEdge from 4D"
 logo: "/assets/logo.png"   # optional
 show_downloads: true       # controls the download links in header
 github:
   is_user_page: true
   owner_url: "https://github.com/miyako"
-  repository_url: "https://github.com/miyako/LlamaEdgeEmbeddings"
+  repository_url: "https://github.com/miyako/LlamaEdge"
   is_project_page: false
 
 exclude:
