@@ -79,6 +79,8 @@ Function head($_model : cs:C1710._model)
 			This:C1470.headers.Range:="bytes="+String:C10(This:C1470.range.start)+"-"+String:C10(This:C1470.range.end)
 		End if 
 		4D:C1709.HTTPRequest.new(This:C1470.URL; This:C1470)
+	Else 
+		This:C1470._onResponse.call(This:C1470; {success: False:C215}; This:C1470.options)
 	End if 
 	
 Function start()
